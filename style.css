@@ -170,10 +170,10 @@ ul.navbar {
  }
 
  .movie-container {
-    width: 95%;
+    max-width: 960px;
     margin: 0px auto 0px auto;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
     gap: 1.3rem;
     margin-top: 2rem;
     /* background-color: red; */
@@ -184,7 +184,6 @@ ul.navbar {
     
     height: 380px;
     width: 100%;
-    
 
  }
  .box .box-image img {
@@ -198,6 +197,7 @@ ul.navbar {
 
 
  }
+ 
   
  .box .box-image img:hover {
     transform: translateY(-10px);
@@ -264,4 +264,14 @@ justify-content: space-between;
    margin-top: 20px;
    padding: 5px 0px;
    
+}
+
+@media (max-width: 900px) {
+   ul.navbar {
+      display: none;
+   }
+
+   header {
+      padding: 20px 20px;
+   }
 }
